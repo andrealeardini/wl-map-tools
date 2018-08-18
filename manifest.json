@@ -1,6 +1,6 @@
 {
   "name": "Wikilear Maps Tools",
-  "short_name": "WL Maps Tools",
+  "short_name": "WL MapsTools",
   "description": "Tools to drawing on Google Maps",
   "start_url": "/",
   "display": "standalone",
