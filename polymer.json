@@ -1,6 +1,6 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/components/my-app.js",
+  "shell": "src/components/my-apps.js",
   "sources": [
     "images/**/*"
   ],
@@ -9,8 +9,7 @@
     "node_modules/@webcomponents/webcomponentsjs/**",
     "push-manifest.json"
   ],
-  "builds": [
-    {
+  "builds": [{
       "name": "esm-bundled",
       "browserCapabilities": [
         "es2015",

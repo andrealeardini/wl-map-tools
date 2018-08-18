@@ -1,11 +1,9 @@
 {
-  "name": "pwa-starter-kit",
+  "name": "wl-maps-tools",
   "version": "0.8.0",
-  "contributors": [
-    "The Polymer Authors"
-  ],
-  "license": "BSD-3-Clause",
-  "repository": "Polymer/pwa-starter-kit",
+  "author": "Andrea Leardini",
+  "license": "AGPL-3.0",
+  "repository": "andrealeardini/wl-maps-tools",
   "scripts": {
     "start": "polymer serve",
     "build": "npm run build:prpl-server && npm run build:static",
