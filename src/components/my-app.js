@@ -1,5 +1,25 @@
 /**
 @license
+     WL Maps Tools: drawings on Google Maps
+     Copyright (C) 2018 Andrea Leardini. All rights reserved.
+     GitHub: https://github.com/andrealeardini
+     Google+: https://plus.google.com/+AndreaLeardini
+
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU Affero General Public License as published
+     by the Free Software Foundation, either version 3 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU Affero General Public License for more details.
+
+     You should have received a copy of the GNU Affero General Public License
+     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+This file incorporates work covered by the following copyright and permission notice:
+
 Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
@@ -8,16 +28,33 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement, html } from '@polymer/lit-element';
-import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings.js';
-import { connect } from 'pwa-helpers/connect-mixin.js';
-import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
-import { installOfflineWatcher } from 'pwa-helpers/network.js';
-import { installRouter } from 'pwa-helpers/router.js';
-import { updateMetadata } from 'pwa-helpers/metadata.js';
+import {
+  LitElement,
+  html
+} from '@polymer/lit-element';
+import {
+  setPassiveTouchGestures
+} from '@polymer/polymer/lib/utils/settings.js';
+import {
+  connect
+} from 'pwa-helpers/connect-mixin.js';
+import {
+  installMediaQueryWatcher
+} from 'pwa-helpers/media-query.js';
+import {
+  installOfflineWatcher
+} from 'pwa-helpers/network.js';
+import {
+  installRouter
+} from 'pwa-helpers/router.js';
+import {
+  updateMetadata
+} from 'pwa-helpers/metadata.js';
 
 // This element is connected to the Redux store.
-import { store } from '../store.js';
+import {
+  store
+} from '../store.js';
 
 // These are the actions needed by this element.
 import {
@@ -32,13 +69,21 @@ import '@polymer/app-layout/app-drawer/app-drawer.js';
 import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
-import { menuIcon } from './my-icons.js';
+import {
+  menuIcon
+} from './my-icons.js';
 import './snack-bar.js';
 
 class MyApp extends connect(store)(LitElement) {
-  _render({appTitle, _page, _drawerOpened, _snackbarOpened, _offline}) {
+  _render({
+    appTitle,
+    _page,
+    _drawerOpened,
+    _snackbarOpened,
+    _offline
+  }) {
     // Anything that's related to rendering should be done in here.
-    return html`
+    return html `
     <style>
       :host {
         --app-drawer-width: 256px;
@@ -243,16 +288,16 @@ class MyApp extends connect(store)(LitElement) {
     installRouter((location) => store.dispatch(navigate(window.decodeURIComponent(location.pathname))));
     installOfflineWatcher((offline) => store.dispatch(updateOffline(offline)));
     installMediaQueryWatcher(`(min-width: 460px)`,
-        (matches) => store.dispatch(updateLayout(matches)));
+      (matches) => store.dispatch(updateLayout(matches)));
   }
 
   _didRender(properties, changeList) {
     if ('_page' in changeList) {
       const pageTitle = properties.appTitle + ' - ' + changeList._page;
       updateMetadata({
-          title: pageTitle,
-          description: pageTitle
-          // This object also takes an image property, that points to an img src.
+        title: pageTitle,
+        description: pageTitle
+        // This object also takes an image property, that points to an img src.
       });
     }
   }
