@@ -1,7 +1,7 @@
 {
   "name": "Wikilear Maps Tools",
   "short_name": "WL Maps Tools",
-  "description": "Tools to drawing on Google Maps",
+  "description": "Tools to draws on a map, import and export drawings (GeoJSON, KML and other formats)",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#3f51b5",
