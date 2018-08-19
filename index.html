@@ -119,6 +119,18 @@ This file incorporates work covered by the following copyright and permission no
       font-display: swap;
     }
 
+    @font-face {
+      font-family: 'Roboto Condensed';
+      font-style: italic;
+      font-weight: 700;
+      src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(https://fonts.gstatic.com/s/roboto/v18/KFOjCnqEu92Fr1Mu51TzBic6CsQ.woff2) format('woff2');
+      /* THe browser draws the text immediately in the fallback font if the font
+            isn't loaded, then swaps it with the webfont when it eventually loads
+            See: https://developers.google.com/web/updates/2016/02/font-display
+      */
+      font-display: swap;
+    }
+
     body {
       margin: 0;
       /* This is a font-stack that tries to use the system-default sans-serifs first */
