@@ -119,8 +119,8 @@ class MyApp extends connect(store)(LitElement) {
       }
 
       [main-title] {
-        font-family: 'Pacifico';
-        text-transform: lowercase;
+        font-family: 'Open Sans';
+        text-transform: capitalize;
         font-size: 30px;
         /* In the narrow layout, the toolbar is offset by the width of the
         drawer button, and the text looks not centered. Add a padding to
