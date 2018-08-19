@@ -6,7 +6,7 @@
 
 
 
-# WL Maps Tools
+# WikiLear Maps Tools
 
 Tools to drawing on a map:
 - create box, circle, line, polygons, square, text
