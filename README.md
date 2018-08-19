@@ -8,6 +8,9 @@
 
 # WL Maps Tools
 
-Tools to drawing on Google Maps:
-- create square, box, text
-- import drawings in GeoJSON, KML formats
+Tools to drawing on a map:
+- create box, circle, line, polygons, square, text
+- import drawings (GeoJSON, KML and other formats)
+- export drawings (GeoJSON, KML and other formats)
+- misure distance, area, ecc.
+- metadata to calculate popolation, density or other information about an area or the objects selected
